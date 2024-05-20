@@ -39,16 +39,12 @@ public class BsaLauncher {
             scores[i] = new Score(vakken[i], behaaldeCijfer); // if statement is niet nodig, de loop eindigt pas als het cijfer tussen de 1,0 en 10,0 ligt
 
             // som van alle studiepunten samen
-            sumBehaaldeStudiepunten += scores[i].getBehaaldePunten();
+            sumBehaaldeStudiepunten += scores[i].getBehaaldePunten();// let op dat je de juiste array aanspreekt om de som op te halen, anders krijg je de som van alle te behalen punten, dat is altijd 28
         }
         // toon resultaten
         for (int i = 0; i < vakken.length; i++) {
             System.out.printf("Vak/project: %-30s Cijfer: %-6.2f Behaalde punten: %-5d\n", vakken[i].getName(), scores[i].getCijfer(), scores[i].getBehaaldePunten());
-
         }
         System.out.printf("Totaal behaalde studiepunten zijn: %d/%d", sumBehaaldeStudiepunten, TOTAAL_TE_BEHALEN_STUDIEPUNTEN);
-
-
-
     }
 }
