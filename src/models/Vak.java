@@ -3,10 +3,10 @@ package models;
 public class Vak {
     private String name;
     private int punten;
-    private int cesuur;
+    private double cesuur;
 
     // constructor
-    public Vak(String name, int punten, int cesuur) {
+    public Vak(String name, int punten, double cesuur) {
         this.name = name;
         this.punten = punten;
         this.cesuur = cesuur;
@@ -21,7 +21,7 @@ public class Vak {
         return punten;
     }
 
-    public int getCesuur() {
+    public double getCesuur() {
         return cesuur;
     }
 
